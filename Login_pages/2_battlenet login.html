@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Battlenet_Login</title>
+        <style>
+            html,
+            body {
+                width: 100%;
+                height: 100%;
+            }
+
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgb(27, 31, 30);
+            }
+
+            img {
+                margin-bottom: 10px;
+                margin-left: 40px;
+                margin-right: 40px;
+            }
+
+            .Setting {
+                justify-content: flex-end;
+                margin-bottom: 15px;
+                margin-top: 15px;
+            }
+
+            .wrapper {
+                display: flex;
+                min-height: 625px;
+                /*  flex-direction 속성은 플렉스 컨테이너 안에서 플렉스 요소가 배치될 방향을 설정
+                column : 만약에 쓰기 방식이 수평이면, 플렉스 요소는 수직 방향으로 위쪽에서 아래쪽으로 배치됩니다.*/
+                flex-direction: column;
+                /*  padding에서 2개를 주면 첫번째는 상하, 두번째는 좌우를 말한다.
+                em : 요소의 글골 크기를 1em으로 갖는다. 만약 해당 요소의 글꼴 크기가 없다면 부모의 폰트 사이즈를 1em으로 해당한다.
+                이는 폰트 사이즈는 부모 요소로부터 상속받기 때문이다.*/
+                padding: 3em 2em;
+                border: 2px solid #414141;
+                text-align: center;
+            }
+
+            #login {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .btnset {
+                background-color: #313131;
+            }
+            .button__icon {
+                background-color: white;
+                display: inline-flex;
+                align-items: center;
+            }
+
+            #login input {
+                height: 30px;
+                margin-bottom: 15px;
+                padding: 0 10px;
+                color: white;
+                background-color: black;
+                border-radius: 5px;
+                border-color: rgb(18, 118, 241);
+            }
+
+            #login button {
+                height: 40px;
+                border-radius: 5px;
+                background-color: rgb(0, 129, 235);
+                color: white;
+            }
+
+            .button__icon_2 {
+                size: 80px;
+            }
+
+            #login label {
+                color: white;
+            }
+
+            .websites {
+                margin-bottom: 10px;
+            }
+            .lost_pw {
+                margin-bottom: 20px;
+            }
+
+            .login_prob {
+                margin-bottom: 20px;
+            }
+
+            .acc_recovery {
+                margin-bottom: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <img src="./img/Battlenet_2021_logo.png" />
+            <div class="Setting">
+                <button type="bttnSetting" class="btnset">
+                    <span class="button__icon">
+                        <ion-icon name="settings-outline"></ion-icon>
+                    </span>
+                </button>
+                <script
+                    type="module"
+                    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+                ></script>
+                <script
+                    nomodule
+                    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+                ></script>
+            </div>
+            <form id="login">
+                <input
+                    id="userId"
+                    type="text"
+                    placeholder="이메일 또는 휴대전화"
+                />
+                <input id="userPW" type="password" placeholder="비밀번호" />
+                <label
+                    ><input type="checkbox" value="0" name="rel" />로그인 상태
+                    유지하기
+                    <span>
+                        <ion-icon name="information-circle-outline"></ion-icon>
+                    </span>
+                </label>
+                <button class="bttnLogin" type="submit" onclick="to()">
+                    로그인
+                </button>
+                <div>------------ 또는 ------------</div>
+                <div class="Websites">
+                    <span class="button__icon_2">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                        <ion-icon name="logo-google"></ion-icon>
+                        <ion-icon name="logo-google"></ion-icon>
+                    </span>
+                </div>
+            </form>
+            <a href="#" class="lost_pw">Battle.net 무료 회원 가입</a>
+            <a href="#" class="login_prob">로그인 문제 해결</a>
+            <a href="#" class="acc_recovery">탈퇴한 계정 복구</a>
+        </div>
+    </body>
+</html>
